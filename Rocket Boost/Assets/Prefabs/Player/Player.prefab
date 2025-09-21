@@ -72,22 +72,30 @@ MonoBehaviour:
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: 4551c9f3-86e7-4f90-bcce-022faadf2f4a
+    - m_Name: 1D Axis
+      m_Id: 09bb5b44-c9cf-4694-b83c-16a06a4bf521
+      m_Path: 1DAxis
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Rotate
+      m_Flags: 4
+    - m_Name: negative
+      m_Id: 939204ea-0872-42f8-a9ac-48f5578a9347
       m_Path: <Keyboard>/a
       m_Interactions: 
       m_Processors: 
       m_Groups: 
       m_Action: Rotate
-      m_Flags: 0
-    - m_Name: 
-      m_Id: 1724122a-f114-416c-9d2e-5d60479e71eb
+      m_Flags: 8
+    - m_Name: positive
+      m_Id: b4622c22-285f-4a93-be48-ead93148b9a3
       m_Path: <Keyboard>/d
       m_Interactions: 
       m_Processors: 
       m_Groups: 
       m_Action: Rotate
-      m_Flags: 0
+      m_Flags: 8
     m_Flags: 0
   thrustStrength: 800
 --- !u!54 &9013927662586881395
