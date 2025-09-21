@@ -8,7 +8,7 @@ public class Movement : MonoBehaviour
 
     private Rigidbody rb;
 
-    [SerializeField] int thrustStrength;
+    [SerializeField] float thrustStrength = 100f;
 
     private void OnEnable()
     {
@@ -31,7 +31,7 @@ public class Movement : MonoBehaviour
     {
         if (thrust.IsPressed())
         {
-            rb.AddRelativeForce(Vector3.up * thrustStrength);
+            rb.AddRelativeForce(Vector3.up * thrustStrength * Time.fixedDeltaTime);
         }
     }
 }
