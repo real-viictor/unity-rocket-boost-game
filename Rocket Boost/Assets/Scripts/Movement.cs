@@ -8,6 +8,8 @@ public class Movement : MonoBehaviour
 
     private Rigidbody rb;
 
+    [SerializeField] int thrustStrength;
+
     private void OnEnable()
     {
         thrust.Enable();
@@ -20,7 +22,7 @@ public class Movement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         Thrust();
     }
@@ -29,7 +31,7 @@ public class Movement : MonoBehaviour
     {
         if (thrust.IsPressed())
         {
-            Debug.Log("Tested");
+            rb.AddRelativeForce(Vector3.up * thrustStrength);
         }
     }
 }
