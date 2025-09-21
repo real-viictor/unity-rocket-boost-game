@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 public class Movement : MonoBehaviour
 {
     [SerializeField] InputAction thrust;
+    [SerializeField] InputAction rotate;
 
     private Rigidbody rb;
 

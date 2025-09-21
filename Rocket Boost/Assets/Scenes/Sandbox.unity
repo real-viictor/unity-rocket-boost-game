@@ -653,8 +653,40 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 6590912001607170461, guid: 63104838734b5e14bbc6f98f3d5c0702, type: 3}
+      propertyPath: rotate.m_Name
+      value: Rotate
+      objectReference: {fileID: 0}
+    - target: {fileID: 6590912001607170461, guid: 63104838734b5e14bbc6f98f3d5c0702, type: 3}
       propertyPath: thrustStrength
-      value: 10
+      value: 800
+      objectReference: {fileID: 0}
+    - target: {fileID: 6590912001607170461, guid: 63104838734b5e14bbc6f98f3d5c0702, type: 3}
+      propertyPath: rotate.m_SingletonActionBindings.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6590912001607170461, guid: 63104838734b5e14bbc6f98f3d5c0702, type: 3}
+      propertyPath: rotate.m_SingletonActionBindings.Array.data[0].m_Id
+      value: 4551c9f3-86e7-4f90-bcce-022faadf2f4a
+      objectReference: {fileID: 0}
+    - target: {fileID: 6590912001607170461, guid: 63104838734b5e14bbc6f98f3d5c0702, type: 3}
+      propertyPath: rotate.m_SingletonActionBindings.Array.data[1].m_Id
+      value: 1724122a-f114-416c-9d2e-5d60479e71eb
+      objectReference: {fileID: 0}
+    - target: {fileID: 6590912001607170461, guid: 63104838734b5e14bbc6f98f3d5c0702, type: 3}
+      propertyPath: rotate.m_SingletonActionBindings.Array.data[0].m_Path
+      value: <Keyboard>/a
+      objectReference: {fileID: 0}
+    - target: {fileID: 6590912001607170461, guid: 63104838734b5e14bbc6f98f3d5c0702, type: 3}
+      propertyPath: rotate.m_SingletonActionBindings.Array.data[1].m_Path
+      value: <Keyboard>/d
+      objectReference: {fileID: 0}
+    - target: {fileID: 6590912001607170461, guid: 63104838734b5e14bbc6f98f3d5c0702, type: 3}
+      propertyPath: rotate.m_SingletonActionBindings.Array.data[0].m_Action
+      value: Rotate
+      objectReference: {fileID: 0}
+    - target: {fileID: 6590912001607170461, guid: 63104838734b5e14bbc6f98f3d5c0702, type: 3}
+      propertyPath: rotate.m_SingletonActionBindings.Array.data[1].m_Action
+      value: Rotate
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

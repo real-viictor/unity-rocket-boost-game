@@ -64,7 +64,32 @@ MonoBehaviour:
       m_Action: Thrust
       m_Flags: 0
     m_Flags: 0
-  thrustStrength: 100
+  rotate:
+    m_Name: Rotate
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 33fa7738-f4fc-4300-b136-1218720e3238
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 4551c9f3-86e7-4f90-bcce-022faadf2f4a
+      m_Path: <Keyboard>/a
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Rotate
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 1724122a-f114-416c-9d2e-5d60479e71eb
+      m_Path: <Keyboard>/d
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Rotate
+      m_Flags: 0
+    m_Flags: 0
+  thrustStrength: 800
 --- !u!54 &9013927662586881395
 Rigidbody:
   m_ObjectHideFlags: 0
