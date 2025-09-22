@@ -9,7 +9,8 @@ public class Movement : MonoBehaviour
 
     private Rigidbody rb;
 
-    [SerializeField] float thrustStrength = 100f;
+    [SerializeField] float thrustStrength = 800f;
+    [SerializeField] float rotationStrength = 50f;
 
     private void OnEnable()
     {
@@ -27,6 +28,7 @@ public class Movement : MonoBehaviour
     void FixedUpdate()
     {
         Thrust();
+        Rotate();
     }
 
     void Thrust()
@@ -35,5 +37,10 @@ public class Movement : MonoBehaviour
         {
             rb.AddRelativeForce(Vector3.up * thrustStrength * Time.fixedDeltaTime);
         }
+    }
+
+    void Rotate()
+    {
+        transform.Rotate(0, 0, rotate.ReadValue<float>() * rotationStrength * Time.fixedDeltaTime);
     }
 }

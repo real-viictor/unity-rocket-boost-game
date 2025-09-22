@@ -80,7 +80,7 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Rotate
       m_Flags: 4
-    - m_Name: negative
+    - m_Name: positive
       m_Id: 939204ea-0872-42f8-a9ac-48f5578a9347
       m_Path: <Keyboard>/a
       m_Interactions: 
@@ -88,7 +88,7 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Rotate
       m_Flags: 8
-    - m_Name: positive
+    - m_Name: negative
       m_Id: b4622c22-285f-4a93-be48-ead93148b9a3
       m_Path: <Keyboard>/d
       m_Interactions: 
@@ -98,6 +98,7 @@ MonoBehaviour:
       m_Flags: 8
     m_Flags: 0
   thrustStrength: 800
+  rotationStrength: 50
 --- !u!54 &9013927662586881395
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -123,7 +124,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 48
   m_CollisionDetection: 0
 --- !u!65 &6945317870891655118
 BoxCollider:
