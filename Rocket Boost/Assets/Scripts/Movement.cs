@@ -45,8 +45,6 @@ public class Movement : MonoBehaviour
         {
             rb.freezeRotation = true;
             transform.Rotate(0, 0, rotate.ReadValue<float>() * rotationStrength * Time.fixedDeltaTime);
-        } else
-        {
             rb.freezeRotation = false;
         }
         
