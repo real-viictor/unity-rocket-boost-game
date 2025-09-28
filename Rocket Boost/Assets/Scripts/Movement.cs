@@ -41,6 +41,14 @@ public class Movement : MonoBehaviour
 
     void Rotate()
     {
-        transform.Rotate(0, 0, rotate.ReadValue<float>() * rotationStrength * Time.fixedDeltaTime);
+        if (rotate.IsPressed())
+        {
+            rb.freezeRotation = true;
+            transform.Rotate(0, 0, rotate.ReadValue<float>() * rotationStrength * Time.fixedDeltaTime);
+        } else
+        {
+            rb.freezeRotation = false;
+        }
+        
     }
 }
