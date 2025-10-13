@@ -18,7 +18,7 @@ public class CollisionHandler : MonoBehaviour
                 Debug.Log("Ganhou");
                 break;
             default:
-                SceneManager.LoadScene(0);
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
                 break;
         }
     }
