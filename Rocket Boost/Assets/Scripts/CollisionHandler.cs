@@ -11,11 +11,8 @@ public class CollisionHandler : MonoBehaviour
             case "Friendly":
                 Debug.Log("Está no início");
                 break;
-            case "Fuel":
-                Debug.Log("Pegou combustível");
-                break;
             case "Finish":
-                Debug.Log("Ganhou");
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                 break;
             default:
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
