@@ -788,6 +788,10 @@ PrefabInstance:
       propertyPath: m_Resource
       value: 
       objectReference: {fileID: 8300000, guid: cfe5979832c62fb48ad8ac78f474c9a3, type: 3}
+    - target: {fileID: 8098948093084478215, guid: 63104838734b5e14bbc6f98f3d5c0702, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
