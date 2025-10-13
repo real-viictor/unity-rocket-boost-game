@@ -1,16 +1,25 @@
+using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CollisionHandler : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void OnCollisionEnter(Collision collision)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        switch (collision.gameObject.tag)
+        {
+            case "Friendly":
+                Debug.Log("Está no início");
+                break;
+            case "Fuel":
+                Debug.Log("Pegou combustível");
+                break;
+            case "Finish":
+                Debug.Log("Ganhou");
+                break;
+            default:
+                SceneManager.LoadScene(0);
+                break;
+        }
     }
 }
