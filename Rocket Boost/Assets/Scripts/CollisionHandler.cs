@@ -12,11 +12,31 @@ public class CollisionHandler : MonoBehaviour
                 Debug.Log("Está no início");
                 break;
             case "Finish":
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                LoadNextLevel();
                 break;
             default:
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                Invoke("ReloadLevel", 2f);
                 break;
         }
+    }
+
+    private void LoadNextLevel()
+    {
+        int currentIndex = SceneManager.GetActiveScene().buildIndex;
+        int totalScenes = SceneManager.sceneCountInBuildSettings;
+
+        if (currentIndex + 1 < totalScenes)
+        {
+            SceneManager.LoadScene(currentIndex + 1);
+        }
+        else
+        {
+            SceneManager.LoadScene(0);
+        }
+    }
+
+    private void ReloadLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
