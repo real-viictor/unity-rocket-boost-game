@@ -12,12 +12,25 @@ public class CollisionHandler : MonoBehaviour
                 Debug.Log("Está no início");
                 break;
             case "Finish":
-                LoadNextLevel();
+                WinLevel();
                 break;
             default:
-                Invoke("ReloadLevel", 2f);
+                CrashRocket();
                 break;
         }
+    }
+
+    private void CrashRocket()
+    {
+        DisableRocketMovement();
+        Invoke("ReloadLevel", 2f);
+    }
+
+    private void WinLevel()
+    {
+        DisableRocketMovement();
+        Invoke("LoadNextLevel", 2f);
+
     }
 
     private void LoadNextLevel()
@@ -38,5 +51,15 @@ public class CollisionHandler : MonoBehaviour
     private void ReloadLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    private void DisableRocketMovement()
+    {
+        Movement movement = GetComponent<Movement>();
+        if (movement)
+        {
+            movement.enabled = false;
+        }
+        
     }
 }
