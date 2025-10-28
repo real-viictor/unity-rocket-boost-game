@@ -9,7 +9,7 @@ public class CollisionHandler : MonoBehaviour
 
     private AudioSource audioSource;
 
-    private bool hasCrashed = false;
+    private bool isControllable = true;
 
     private void Start()
     {
@@ -34,8 +34,9 @@ public class CollisionHandler : MonoBehaviour
 
     private void CrashRocket()
     {
-        if (!hasCrashed) {
-            hasCrashed = true;
+        if (isControllable) 
+        {
+            isControllable = false;
             DisableRocketMovement();
             audioSource.PlayOneShot(crashSound);
             Invoke("ReloadLevel", 2f);
@@ -44,10 +45,13 @@ public class CollisionHandler : MonoBehaviour
 
     private void WinLevel()
     {
-        DisableRocketMovement();
-        audioSource.PlayOneShot(sucessSound);
-        Invoke("LoadNextLevel", 2f);
-
+        if (isControllable)
+        {
+            isControllable = false;
+            DisableRocketMovement();
+            audioSource.PlayOneShot(sucessSound);
+            Invoke("LoadNextLevel", 2f);
+        }
     }
 
     private void LoadNextLevel()
