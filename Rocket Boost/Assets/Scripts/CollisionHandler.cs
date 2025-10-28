@@ -9,6 +9,8 @@ public class CollisionHandler : MonoBehaviour
 
     private AudioSource audioSource;
 
+    private bool hasCrashed = false;
+
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -32,9 +34,12 @@ public class CollisionHandler : MonoBehaviour
 
     private void CrashRocket()
     {
-        DisableRocketMovement();
-        audioSource.PlayOneShot(crashSound);
-        Invoke("ReloadLevel", 2f);
+        if (!hasCrashed) {
+            hasCrashed = true;
+            DisableRocketMovement();
+            audioSource.PlayOneShot(crashSound);
+            Invoke("ReloadLevel", 2f);
+        }
     }
 
     private void WinLevel()
