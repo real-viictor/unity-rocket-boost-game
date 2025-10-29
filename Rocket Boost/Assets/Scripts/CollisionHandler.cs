@@ -7,8 +7,7 @@ public class CollisionHandler : MonoBehaviour
     [SerializeField] AudioClip sucessSound;
     [SerializeField] AudioClip crashSound;
 
-    [SerializeField] ParticleSystem sucessParticles;
-    [SerializeField] ParticleSystem crashParticles;
+    [SerializeField] ParticleSystem sucessParticles, crashParticles;
 
     private AudioSource audioSource;
 

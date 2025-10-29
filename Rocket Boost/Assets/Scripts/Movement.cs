@@ -8,6 +8,8 @@ public class Movement : MonoBehaviour
     [SerializeField] InputAction rotate;
     [SerializeField] AudioClip mainEngineThrust;
 
+    [SerializeField] ParticleSystem leftThrust, rightThrust, mainThrust;
+
     private Rigidbody rb;
     private AudioSource audioSource;
 
