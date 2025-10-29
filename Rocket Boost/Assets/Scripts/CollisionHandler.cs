@@ -7,6 +7,9 @@ public class CollisionHandler : MonoBehaviour
     [SerializeField] AudioClip sucessSound;
     [SerializeField] AudioClip crashSound;
 
+    [SerializeField] ParticleSystem sucessParticles;
+    [SerializeField] ParticleSystem crashParticles;
+
     private AudioSource audioSource;
 
     private bool isControllable = true;
