@@ -41,6 +41,7 @@ public class Movement : MonoBehaviour
         if (thrust.IsPressed())
         {
             rb.AddRelativeForce(Vector3.up * thrustStrength * Time.fixedDeltaTime);
+            mainThrust.Play();
             if (!audioSource.isPlaying)
             {
                 audioSource.PlayOneShot(mainEngineThrust);
@@ -48,6 +49,7 @@ public class Movement : MonoBehaviour
         } else
         {
             audioSource.Stop();
+            mainThrust.Stop();
         }
     }
 
@@ -58,6 +60,20 @@ public class Movement : MonoBehaviour
             rb.freezeRotation = true;
             transform.Rotate(0, 0, rotate.ReadValue<float>() * rotationStrength * Time.fixedDeltaTime);
             rb.freezeRotation = false;
+            if (rotate.ReadValue<float>() > 0)
+            {
+                //A animação deve ser invertida ao lado que o player está virando
+                rightThrust.Play();
+            }
+            else
+            {
+                leftThrust.Play();
+            }
+        }
+        else 
+        {
+            rightThrust.Stop();
+            leftThrust.Stop();
         }
         
     }
