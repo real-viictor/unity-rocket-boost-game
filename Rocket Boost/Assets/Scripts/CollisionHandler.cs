@@ -25,6 +25,8 @@ public class CollisionHandler : MonoBehaviour
         {
             switch (collision.gameObject.tag)
             {
+                case "Friendly":
+                    break;
                 case "Finish":
                     WinLevel();
                     break;
