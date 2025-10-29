@@ -21,42 +21,37 @@ public class CollisionHandler : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        switch (collision.gameObject.tag)
+        if (isControllable)
         {
-            case "Friendly":
-                Debug.Log("Está no início");
-                break;
-            case "Finish":
-                WinLevel();
-                break;
-            default:
-                CrashRocket();
-                break;
+            switch (collision.gameObject.tag)
+            {
+                case "Finish":
+                    WinLevel();
+                    break;
+                default:
+                    CrashRocket();
+                    break;
+            }
         }
+
     }
 
     private void CrashRocket()
     {
-        if (isControllable) 
-        {
-            isControllable = false;
-            DisableRocketMovement();
-            audioSource.PlayOneShot(crashSound);
-            crashParticles.Play();
-            Invoke("ReloadLevel", 2f);
-        }
+        isControllable = false;
+        DisableRocketMovement();
+        audioSource.PlayOneShot(crashSound);
+        crashParticles.Play();
+        Invoke("ReloadLevel", 2f);
     }
 
     private void WinLevel()
     {
-        if (isControllable)
-        {
-            isControllable = false;
-            DisableRocketMovement();
-            audioSource.PlayOneShot(sucessSound);
-            sucessParticles.Play();
-            Invoke("LoadNextLevel", 2f);
-        }
+        isControllable = false;
+        DisableRocketMovement();
+        audioSource.PlayOneShot(sucessSound);
+        sucessParticles.Play();
+        Invoke("LoadNextLevel", 2f);
     }
 
     private void LoadNextLevel()
