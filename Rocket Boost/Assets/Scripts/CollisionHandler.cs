@@ -42,6 +42,7 @@ public class CollisionHandler : MonoBehaviour
             isControllable = false;
             DisableRocketMovement();
             audioSource.PlayOneShot(crashSound);
+            crashParticles.Play();
             Invoke("ReloadLevel", 2f);
         }
     }
@@ -53,6 +54,7 @@ public class CollisionHandler : MonoBehaviour
             isControllable = false;
             DisableRocketMovement();
             audioSource.PlayOneShot(sucessSound);
+            sucessParticles.Play();
             Invoke("LoadNextLevel", 2f);
         }
     }
